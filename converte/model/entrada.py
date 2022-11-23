@@ -1,5 +1,5 @@
 import speech_recognition as sr
-from logica import Meio
+from converte.model.logica import Meio
 class Entrada(Meio):
     def ler(self):
         texto=(input("Digite um texto para ser convertido em voz"))
@@ -11,4 +11,5 @@ class Entrada(Meio):
             rec.adjust_for_ambient_noise(mic)
             print("ouvindo")
             audio = rec.listen(mic)
-            self.transformaVT(audio,rec)
+            meuTexto=self.transformaVT(audio,rec)
+        return meuTexto

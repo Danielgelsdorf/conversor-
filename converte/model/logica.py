@@ -9,4 +9,5 @@ class Meio:
         trans.runAndWait()
     def transformaVT(self, audio,rec):
         texto = rec.recognize_google(audio, language="pt-BR")
-        print(texto)
+        #print(texto)
+        return texto

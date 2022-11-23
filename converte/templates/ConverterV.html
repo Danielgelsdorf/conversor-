@@ -6,13 +6,14 @@
     </head>
     <body>
         <h2>transformar um texto em áudio </h2>
-        <form action="" method="post">
+        <form action="http://127.0.0.1:8000/converte/ctv/" method="post">
+            {% csrf_token %}
             <div>
                 <label for="texto"> Digite aqui seu texto</label>
-                <textarea id=""msg" texto></textarea>
+                texto<input type="text" name="texto" id="texto">
             </div>
             <div class="button">
-                <input type="submit" id="converterTV" value="converter">
+                <input type="submit"  value="converter">
             </div>
         </form>
         <H3>Voltar para o início</H3>
