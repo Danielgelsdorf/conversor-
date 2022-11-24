@@ -1,5 +1,6 @@
 from entrada import Entrada
 from logica import *
-rodar=Meio()
+rodar=Entrada()
 m="daniel"
-rodar.transformaTV(m)
+texto=rodar.ouvir()
+print(texto)

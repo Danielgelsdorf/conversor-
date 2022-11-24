@@ -6,11 +6,12 @@
     </head>
     <body>
         <form action="" method="post">
+            <H1> Converter de vós para texto</H1>
             {% csrf_token %}
             <input type="submit"value="converter usando a vós">
         </form>
         <h2> texto que você falou</h2>
-        <br> {{dic.texto}}</br>
+        <br> {{texto}}</br>
         <H2>voltar para o início</H2>
         <a href="/">home</a>
     </body>

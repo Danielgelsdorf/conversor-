@@ -20,13 +20,18 @@ def novaView(tex):
 
 def cvt(request):
     if request.method=='POST':
-        texto=""
-        texto=ouve()    
-        return render(request, "converterVT.html",dic={'texto':texto})
-    return render(request, "converterVT.html")
+        texto=ouve(request)
+    return render(request, "converterVT.html",{'texto':texto})
 
-def ouve():
+def ouve(request):
     texto=""
+    dic={}
     escuta=entrada.Entrada()
     texto=escuta.ouvir()
-    return texto
+    convertida=str(texto)
+    #print(type(texto))
+    #dic={'texto':convertida}
+    #print(convertida)
+    #return render(request, "converterVT.html",{'texto':convertida})
+    return convertida
+#ouve(request)
