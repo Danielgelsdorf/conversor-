@@ -19,6 +19,7 @@ def novaView(tex):
 
 
 def cvt(request):
+    texto=""
     if request.method=='POST':
         texto=ouve(request)
     return render(request, "converterVT.html",{'texto':texto})
